@@ -1,0 +1,35 @@
+{
+   "version": 3,
+   "cmakeMinimumRequired": {
+      "major": 3,
+      "minor": 19,
+      "patch": 0
+   },
+   "configurePresets": [
+      {
+         "name": "default",
+         "generator": "Ninja",
+         "cacheVariables": {
+            "CMAKE_C_COMPILER": "/usr/bin/clang-19",
+            "CMAKE_CXX_COMPILER": "/usr/bin/clang++-19",
+            "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+            "LAPACK_LIBRARIES": "/usr/lib/x86_64-linux-gnu/liblapack.so;/usr/lib/x86_64-linux-gnu/libblas.so",
+            "BLAS_LIBRARIES": "/usr/lib/x86_64-linux-gnu/libblas.so",
+            "CMAKE_INSTALL_PREFIX": "/home/achille/user",
+            "Eigen3_DIR": "/home/achille/user/lib/cmake/Oros/eigen"
+         }
+      },
+      {
+         "name": "gcc14",
+         "generator": "Ninja",
+         "cacheVariables": {
+            "CMAKE_C_COMPILER": "/usr/bin/gcc-14",
+            "CMAKE_CXX_COMPILER": "/usr/bin/g++-14",
+            "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+            "LAPACK_LIBRARIES": "/usr/lib/x86_64-linux-gnu/liblapack.so;/usr/lib/x86_64-linux-gnu/libblas.so",
+            "BLAS_LIBRARIES": "/usr/lib/x86_64-linux-gnu/libblas.so",
+            "CMAKE_INSTALL_PREFIX": "/home/achille/user"
+         }
+      }
+   ]
+}
