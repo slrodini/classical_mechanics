@@ -9,7 +9,7 @@ static inline double sq(double x)
    return x * x;
 }
 
-static constexpr size_t Nsqrt = 8;
+static constexpr size_t Nsqrt = 15;
 static constexpr size_t N     = Nsqrt * Nsqrt;
 static constexpr double L     = 6.;
 // static constexpr double sigma2 = L / Nsqrt; /* Get Lattice config */
@@ -137,8 +137,8 @@ int main()
       size_t j       = i / Nsqrt;
       pos[2 * i + 1] = L * (double)j / Nsqrt;
 
-      vel[2 * i]     = global_ran2.uniform(-2, 2);
-      vel[2 * i + 1] = global_ran2.uniform(-2, 2);
+      vel[2 * i]     = global_ran2.uniform(-0.01, 0.01);
+      vel[2 * i + 1] = global_ran2.uniform(-0.01, 0.01);
 
       cm_vel_x += vel[2 * i];
       cm_vel_y += vel[2 * i + 1];

@@ -5,8 +5,7 @@ project(MD CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Eigen3 3.3 REQUIRED)
-
+set(CMAKE_CXX_FLAGS "-O3 -funroll-loops -Wall -Wextra -mtune=native -march=native")
 
 add_executable(main main.cc)
 target_link_libraries(main PUBLIC /usr/local/lib/libraylib.a)
