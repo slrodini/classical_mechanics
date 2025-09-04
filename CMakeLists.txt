@@ -7,9 +7,14 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(CMAKE_CXX_FLAGS "-O3 -funroll-loops -Wall -Wextra -mtune=native -march=native")
 
-add_executable(main main.cc)
-target_link_libraries(main PUBLIC /usr/local/lib/libraylib.a)
+add_executable(md_rk md_rk.cc)
+target_link_libraries(md_rk PUBLIC /usr/local/lib/libraylib.a)
 
 
-add_executable(rkn_main rkn_main.cc)
-target_link_libraries(rkn_main PUBLIC /usr/local/lib/libraylib.a)
+add_executable(md_rkn md_rkn.cc)
+target_link_libraries(md_rkn PUBLIC /usr/local/lib/libraylib.a)
+
+
+
+add_executable(ex_3_18 ex_3_18.cc)
+target_link_libraries(ex_3_18 PUBLIC /usr/local/lib/libraylib.a)
